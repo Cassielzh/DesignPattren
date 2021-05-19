@@ -16,8 +16,7 @@ public class ChatGroup extends AbstractChatroom
     public void sendText(String from,String to,String message)
     {
         Member member = (Member)members.get(to);
-        String newMessage = message;
-        newMessage = message.replaceAll("打","*");
+        String newMessage = message.replaceAll("打","*");
         member.receiveText(from,newMessage);
     }
 
