@@ -13,7 +13,7 @@ public class ChatGroup extends AbstractChatroom
             member.setChatroom(this);
         }
     }
-    public void sendText(String from,String to,String message)
+    public void sendText(String from, String to,String message)
     {
         Member member = (Member)members.get(to);
         String newMessage = message.replaceAll("打","*");
