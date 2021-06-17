@@ -10,7 +10,6 @@ public class Client {
 
         ITestInterface ipic = new CTest();
         ITestInterface proxy = (ITestInterface) (new CLocalPicShow(ipic)).getProxyInstance();
-
         proxy.SendMessage("AAAA");
     }
 
