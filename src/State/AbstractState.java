@@ -8,7 +8,7 @@ public abstract class AbstractState {
 
     public void downloadFile(int score){
         System.out.println(acc.getName()+"下载文件,扣除"+score+"积分。");
-        this.point -= point;
+        this.point -= score;
         checkState(score);
         System.out.println("剩余积分为："+this.point+",当前级别为："+acc.getState().stateName+"。");
     }
@@ -24,6 +24,22 @@ public abstract class AbstractState {
         System.out.println(acc.getName()+"回复留言，增加"+score+"积分。");
         this.point += score;
         checkState(score);
-        System.out.println("剩余积分为："+this.point)
+        System.out.println("剩余积分为："+this.point+",当前级别为："+acc.getState().stateName+"。");
+    }
+
+    public void setPoint(int point){
+        this.point = point;
+    }
+
+    public int getPoint(){
+        return (this.point);
+    }
+
+    public void setStateName(String stateName){
+        this.stateName = stateName;
+    }
+
+    public String getStateName(){
+        return (this.stateName);
     }
 }

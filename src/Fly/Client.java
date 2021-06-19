@@ -1,8 +1,5 @@
 package Fly;
 
-import Prototype.Apple;
-
-import java.sql.SQLOutput;
 import java.util.Random;
 
 public class Client {
